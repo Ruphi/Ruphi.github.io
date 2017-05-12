@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascriptEditor</title>
+    <link rel="stylesheet" href="../../css/header.css"/>
+    <style>
+        .wrap{
+            width: 600px;
+            margin:0 auto;
+        }
+        iframe{
+            display: none;
+        }
+        textarea{
+            display: block;
+            font-family: Consolas Arial sans-serif;
+            font-size: 15px;
+            padding: 15px;
+            background-color: silver;
+            margin:0 auto;
+        }
+        textarea:focus{
+            outline: none;
+        }
+        button{
+            box-shadow: none;
+            padding: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        button:focus{
+            outline: none;
+        }
+        .run{
+            background-color: coral;
+        }
+        #clear{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <p><a href="../../project_list.html">返回首页</a></p>
+</header>
+<div class="wrap">
+    <label>
+        <textarea placeholder="请输入您的javascript代码" class="javascriptInput" id="script" style="resize: none; overflow: scroll; width: 600px; height: 400px;"></textarea>
+    </label>
+    <button type="button"  id="clear">清空</button>
+    <button type="button" onclick="run()" class="run">运行</button>
+
+</div>
+<script>
+    var clear_btn=document.getElementById("clear");
+    clear_btn.addEventListener("click", function () {
+        clear();
+    });
+
+    function clear() {
+        document.getElementById("script").value="";
+    }
+
+    function run() {
+        var script=document.getElementById("script").value;
+        var content="<html><head></head><body><script>(function() {"+ script + "})();</scr"+"ipt></body></html>";
+
+        var iframe=document.createElement("iframe");
+        iframe.src="about:blank";
+        iframe.id="result";
+
+        document.body.appendChild(iframe);
+        var iframe_document=iframe.contentWindow.document;
+        iframe_document.designMode="on";
+        iframe_document.open();
+        iframe_document.write(content);
+        iframe_document.close();
+        iframe_document.designMode="off";
+
+        var iframe_remove=document.getElementById("result");
+        iframe_remove.parentNode.removeChild(iframe_remove);
+    }
+</script>
+</body>
+</html>
