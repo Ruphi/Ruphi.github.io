@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>一颗橡皮的计算器</title>
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="../../css/header.css">
+</head>
+<body>
+<header>
+    <p><a href="../../project_list.html">返回首页</a></p>
+</header>
+<section id="calculator">
+    <div class="top_title">
+        <h4>一颗橡皮的计算器</h4>
+        <p>&copy;Ruphi</p>
+    </div>
+    <div class="input result show">
+        <label>
+            <span style="font-weight: bold; color: #555;">Result:</span>
+            <input type="text" name="input_result" onfocus="this.blur()" id="screen">
+            <!--使用onfocus="this.blur()避免键盘输入"-->
+        </label>
+    </div>
+    <div class="keys">
+        <div class="key">7</div>
+        <div class="key">8</div>
+        <div class="key">9</div>
+        <div class="key">Back</div>
+        <div class="key">C</div>
+        <div class="key">4</div>
+        <div class="key">5</div>
+        <div class="key">6</div>
+        <div class="key">×</div>
+        <div class="key">÷</div>
+        <div class="key">1</div>
+        <div class="key">2</div>
+        <div class="key">3</div>
+        <div class="key">＋</div>
+        <div class="key">－</div>
+        <div class="key">0</div>
+        <div class="key">00</div>
+        <div class="key">·</div>
+        <div class="key">％</div>
+        <div class="key">＝</div>
+    </div>
+    <div class="bottom">
+        <h4>欢迎使用</h4>
+    </div>
+</section>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/calculate.js"></script>
+</body>
+</html>

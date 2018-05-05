@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-width: 1280px;
+  background: #dcdcdc;
+}
+.f-left {
+  float: left;
+}
+.f-right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+ul {
+  list-style: none;
+}
+.msg-font-yahei {
+  font-family: "Microsoft YaHei UI";
+}
+.msg-font-song {
+  font-family: "宋体";
+}
+#wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #fff;
+}
+header {
+  height: 57px;
+  padding: 14px 0 0 0;
+}
+header .brand ul {
+  height: 36px;
+  margin-left: 59px;
+}
+header .brand ul li {
+  display: inline-block;
+  font-size: 21px;
+}
+header .brand ul li img {
+  display: block;
+  margin-top: 2px;
+}
+header nav ul li {
+  display: inline-block;
+  margin-right: 38px;
+  width: 64.5px;
+  font-size: 14px;
+  text-align: center;
+  height: 41px;
+  color: #808080;
+}
+header nav ul li:hover {
+  cursor: pointer;
+  border-bottom: 2px solid #e25c60;
+  color: #e25c60;
+}
+header nav ul li.active {
+  border-bottom: 2px solid #e25c60;
+  color: #e25c60;
+}
+header nav ul li.login {
+  color: #e25c60;
+}
+.section1 {
+  background: url("../images/1_img.png") no-repeat;
+  height: 853px;
+  padding: 227px 0 0 112px;
+}
+.section1 span {
+  color: #fff;
+  display: block;
+}
+.section1 span.tit {
+  font-size: 60px;
+  padding-bottom: 29px;
+}
+.section1 span.msg {
+  font-size: 21px;
+}
+.section1 .button {
+  width: 331px;
+  height: 65px;
+  background: #e74f4d;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  line-height: 65px;
+  margin-top: 62px;
+}
+.section2 {
+  margin-top: -162px;
+  background: #fff;
+  height: 248px;
+  padding: 42px 0 0 0;
+}
+.section2 ul {
+  width: 1280px;
+}
+.section2 ul li {
+  display: inline-block;
+  text-align: center;
+  width: 24%;
+}
+.section2 ul li span {
+  display: block;
+  text-align: center;
+  width: 157px;
+  font-size: 14px;
+  margin: 0 auto;
+  padding-top: 45px;
+}
+.section3 {
+  height: 361px;
+  background: #ededed;
+  padding-top: 89px;
+  text-align: center;
+}
+.section3 span {
+  display: block;
+  font-size: 54px;
+  color: rgba(51,34,51,0.2);
+  margin-top: 48px;
+}
+.section4 {
+  height: 340px;
+  padding: 52px 0 0 0;
+  text-align: center;
+  background: url("../images/4_img.png");
+  color: #fff;
+}
+.section4 .title {
+  font-size: 21px;
+}
+.section4 .line {
+  width: 31px;
+  border-bottom: 3px solid #fff;
+  margin: 12px auto;
+}
+.section4 .content {
+  font-size: 12px;
+}
+.section4 .city-select {
+  padding-top: 51px;
+}
+.section4 .city-select label {
+  width: 236px;
+  height: 36px;
+  display: inline-block;
+  background: #fff;
+  margin-right: 30px;
+}
+.section4 .city-select label select {
+  width: 236px;
+  height: 36px;
+  padding-left: 12px;
+  font-size: 12px;
+  color: #a8aaaa;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background: url("../images/4_down.png") no-repeat 210px center;
+}
+.section4 .city-select label select:focus {
+  border: 1px solid #e74f4d;
+  outline: 1px solid #e74f4d;
+}
+.section4 .city-select label select option {
+  border: 1px solid #e74f4d;
+  outline: 1px solid #e74f4d;
+  height: 27px;
+}
+.section4 .city-select label select option:hover {
+  background-color: #e25c60;
+}
+.section4 .city-select button {
+  width: 236px;
+  height: 36px;
+  background: #e25c60;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+.section5 {
+  height: 605px;
+  background: #ededed;
+  padding: 100px 0 0 148px;
+}
+.section5 .ban {
+  text-align: center;
+  float: left;
+  margin-right: 35px;
+}
+.section5 .ban .img_wrap {
+  padding: 12px 9px;
+  background: #fff;
+}
+.section5 .ban .bottom {
+  padding: 10px 0 0 0;
+}
+.section5 .ban .bottom .title {
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+.section5 .ban .bottom .content {
+  font-size: 12px;
+  color: #938e8c;
+}
+.section5 .ban .top {
+  padding-bottom: 10px;
+}
+.section5 .ban .top .title {
+  font-size: 16px;
+}
+.section5 .ban .top .content {
+  font-size: 10px;
+  color: #938e8c;
+  padding-top: 2px;
+}
+.section6 {
+  height: 565px;
+}
+.section6 .content-left {
+  background: url("../images/6_img.png");
+  width: 851px;
+  height: 565px;
+  padding: 131px 0 0 0;
+  text-align: center;
+  color: #fff;
+}
+.section6 .content-left .triangle {
+  width: 0;
+  height: 0;
+  border-top: 11.5px solid transparent;
+  border-right: 23px solid #fff;
+  border-bottom: 11.5px solid transparent;
+  position: relative;
+  left: 828px;
+  top: -180px;
+}
+.section6 .content-right {
+  width: 429px;
+  height: 565px;
+  padding: 160px 0 0 0;
+  text-align: center;
+}
+.section6 .content-right .content-wrap {
+  width: 290px;
+  margin: 0 auto;
+}
+.section6 .content-right .content-wrap .title {
+  font-size: 16px;
+  padding-bottom: 30px;
+}
+.section6 .content-right .content-wrap .title span {
+  color: #e74f4d;
+}
+.section6 .content-right .content-wrap .content {
+  font-size: 12px;
+  color: #938e8c;
+  text-align: justify;
+  line-height: 24px;
+}
+.section6 .content-right .content-wrap .button {
+  width: 105px;
+  height: 33px;
+  margin: 50px auto 24px auto;
+  border: 1px solid #e74f4d;
+  text-align: center;
+  line-height: 33px;
+  font-size: 12px;
+  color: #e25c60;
+}
+.section7 {
+  height: 522px;
+}
+.section7 .ban {
+  height: 522px;
+  width: 33.33%;
+  float: left;
+  font-size: 21px;
+  text-align: center;
+  padding-top: 172px;
+}
+.section7 .ban .line {
+  width: 31px;
+  margin: 20px auto;
+}
+.section7 .ban .button {
+  width: 168px;
+  height: 41px;
+  text-align: center;
+  line-height: 41px;
+  font-size: 21px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.section7 .ban1 {
+  background-color: #e25c60;
+  color: #fff;
+}
+.section7 .ban1 .line {
+  border-bottom: 3px solid #fff;
+}
+.section7 .ban1 .button {
+  border: 1px solid #fff;
+}
+.section7 .ban2 .line {
+  border-bottom: 3px solid #938e8c;
+}
+.section7 .ban2 .button {
+  border: 1px solid #e74f4d;
+  color: #e74f4d;
+}
+.section7 .ban3 {
+  background: url("../images/7_img.png");
+}
+.section7 .ban3 .triangle {
+  border-top: 11.5px solid transparent;
+  border-bottom: 11.5px solid transparent;
+  border-left: 23px solid #fff;
+  position: relative;
+  top: 100px;
+}
+.section8 {
+  height: 749px;
+  width: 100%;
+}
+.section8 .msg {
+  height: 302px;
+  padding-top: 109px;
+  text-align: center;
+}
+.section8 .msg .title {
+  font-size: 21px;
+  padding: 9px;
+}
+.section8 .msg .line {
+  width: 31px;
+  border-bottom: 3px solid #e25c60;
+  margin: 0 auto;
+}
+.section8 .msg .content {
+  font-size: 12px;
+  color: #938e8c;
+  width: 427px;
+  margin: 5px auto;
+}
+.section8 .form {
+  width: 100%;
+  height: 447px;
+}
+.section8 .form .content-left {
+  width: 292px;
+  margin-left: 138px;
+}
+.section8 .form .content-left .title {
+  font-size: 14px;
+  font-weight: bold;
+}
+.section8 .form .content-left .content {
+  font-size: 12px;
+  font-family: '宋体';
+  color: #938e8c;
+  padding: 27px 0 38px 0;
+}
+.section8 .form .content-right {
+  width: 638px;
+  margin-left: 58px;
+  margin-top: -15px;
+}
+.section8 .form .content-right form table {
+  width: 638px;
+}
+.section8 .form .content-right form table input {
+  height: 40px;
+  width: 312.7px;
+  background-color: #ededed;
+  border: none;
+  outline: none;
+}
+.section8 .form .content-right form table input[type='text'] {
+  box-sizing: border-box;
+  padding: 17px 0 17px 15px;
+  font-family: '宋体';
+  font-size: 12px;
+  color: #938e8c;
+}
+.section8 .form .content-right form table input[name='describe'] {
+  width: 638px;
+  height: 120px;
+}
+.section8 .form .content-right form table input[type='submit'] {
+  width: 638px;
+}
+footer {
+  width: 100%;
+  height: 416px;
+  background-color: #32363e;
+}
+footer footer {
+  height: 60px;
+  background-color: #2f2f38;
+  position: relative;
+  top: 356px;
+}

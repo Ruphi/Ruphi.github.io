@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一颗橡皮的简易画布</title>
+    <link href="../../css/header.css" rel="stylesheet" type="text/css">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        body{
+            background-color: lightgray;
+        }
+        #canvas_wrap{
+            width: 900px;
+            min-height: 600px;
+            margin:0 auto;
+        }
+        canvas{
+            background-color: #ffffff;
+        }
+        .btns{
+            width: 900px;
+            margin:0 auto;
+            padding-top: 10px;
+        }
+        .btn{
+            width: 80px;
+            height: 40px;
+            background-color: #3399ff;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            font-weight: bold;
+            float: left;
+            margin-right: 15px;
+        }
+        .btn:hover{
+            cursor: pointer;
+            background-color: #fa96b5;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <p style="color: darkviolet">一颗橡皮的画布</p>
+    <p><a href="../../project_list.html">返回首页</a></p>
+</header>
+<section class="canvas" id="canvas_wrap">
+    <canvas id="canvas">
+        您的浏览器不支持canvas！
+    </canvas>
+</section>
+<section class="btns">
+    <div class="btn" id="draw">绘画</div>
+    <div class="btn" id="erase">橡皮擦</div>
+    <div class="btn" id="clear">清空</div>
+</section>
+
+<script>
+    var canvas=document.getElementById("canvas");//获取画布
+    var canvas_wrpa=document.getElementById("canvas_wrap");
+    var context=canvas.getContext("2d");//设置上下文
+
+    canvas.width=canvas_wrpa.offsetWidth;
+    canvas.height=canvas_wrpa.offsetHeight;//设置宽高
+    var toCursorCenter = 6;//用于矫正与光标中心的偏差
+
+    var draw_btn=document.getElementById("draw");
+    var eraser_btn=document.getElementById("erase");
+    var clear_btn=document.getElementById("clear");
+
+
+    draw_btn.addEventListener("click", function () {
+        canvas.style.cursor="crosshair";
+        draw();
+    });
+    eraser_btn.addEventListener("click", function () {
+        canvas.style.cursor="url(img/eraser.ico), auto";
+        erase();
+    });
+    clear_btn.addEventListener("click", function () {
+       canvas.height=canvas.height;
+    });
+
+
+    function draw() {
+        document.onmousedown=function (e) {
+            context.beginPath();
+            context.moveTo(e.pageX-toCursorCenter-canvas_wrpa.offsetLeft+6, e.pageY-canvas_wrpa.offsetTop);
+            draw_move();
+        };
+        document.onmouseup=function (e) {
+            context.lineTo(e.pageX-toCursorCenter-canvas_wrpa.offsetLeft+6, e.pageY-canvas_wrpa.offsetTop);
+            context.stroke();
+            context.closePath();
+            document.onmousemove=function () {
+
+            };
+
+        };
+    }
+    function erase() {
+        document.onmousedown=function (e) {
+            context.clearRect(e.pageX-toCursorCenter-canvas_wrpa.offsetLeft+6, e.pageY-canvas_wrpa.offsetTop, 8, 8);
+            eraser_move();
+        };
+        document.onmouseup=function (e) {
+            document.onmousemove=function () {
+
+            };
+        };
+    }
+
+    function draw_move() {
+        document.onmousemove=function (e) {
+            context.lineTo(e.pageX-toCursorCenter-canvas_wrpa.offsetLeft+6, e.pageY-canvas_wrpa.offsetTop);
+            context.stroke();
+        }
+    }
+    function eraser_move() {
+        document.onmousemove=function (e) {
+            context.clearRect(e.pageX-toCursorCenter-canvas_wrpa.offsetLeft+6, e.pageY-canvas_wrpa.offsetTop, 8, 8);
+        }
+    }
+
+</script>
+</body>
+</html>
